@@ -5019,9 +5019,9 @@
     "restore": {
       "projectUniqueName": "Exercise1",
       "projectName": "Exercise1",
-      "projectPath": "C:\\Users\\patri\\Documents\\GitHub\\Evaluare\\Exercise1\\.local",
+      "projectPath": "C:\\Users\\patri\\Documents\\UiPath\\Exercise1\\.local",
       "packagesPath": "C:\\Users\\patri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\patri\\Documents\\GitHub\\Evaluare\\Exercise1\\.local"
+      "outputPath": "C:\\Users\\patri\\Documents\\UiPath\\Exercise1\\.local"
     },
     "frameworks": {
       "net461": {

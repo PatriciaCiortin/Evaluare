@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1057,962</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1146,1150</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InputDialog_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -62,32 +62,34 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InputDialog" sap:VirtualizedContainerService.HintSize="476,897" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get user input country" DisplayName="InputDialog" sap:VirtualizedContainerService.HintSize="476,1085" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Countries" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Generate a Random Name - Fake Name Generator" sap:VirtualizedContainerService.HintSize="434,474" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Open browser page &quot;www.fakenamegenerator.com&quot;on the advanced section and get a string with all countries" AttachMode="ByInstance" DisplayName="Use Browser Edge: Generate a Random Name - Fake Name Generator" sap:VirtualizedContainerService.HintSize="434,589" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,258" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Get Countries from the web page" DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,291" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <uix:NGetText DisplayName="Get Text - Get Countries" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_1">
               <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php" DesignTimeRectangle="947, 309, 255, 96" ElementType="DropDown" FriendlyName="'AustraliaAustriaBelgium…'" FullSelectorArgument="&lt;webctrl id='c' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='c' tag='SELECT' type='' aaname='' /&gt;" ImageBase64="" InformativeScreenshot="47a460509755ab7cc06743fe7984f3fe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector">
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/advanced.php" DesignTimeRectangle="947, 309, 255, 96" ElementType="DropDown" FriendlyName="'AustraliaAustriaBelgium…'" FullSelectorArgument="&lt;webctrl tag='P' aaname='Country ' innertext='Country Switch to Region' /&gt;&lt;nav up='1' /&gt;&lt;webctrl id='c' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='c' tag='SELECT' type='' aaname='' /&gt;" ImageBase64="" InformativeScreenshot="47a460509755ab7cc06743fe7984f3fe.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="Selector">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="992, 289, 88, 14" ElementType="Text" FriendlyName="'Switch to Region'" FullSelectorArgument="&lt;webctrl parentid='advanced-options' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='advanced-options' tag='A' type='' aaname='Switch to Region' check:text='Switch to Region' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAASCAYAAADWvblEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIZSURBVFhH7ZdNjsIwDIXnAiy5HuI4XXGRchK4BhsWoAohsczEdn6ek5SGLsJIkydVNCWxnz+7jObHdDVVB95YHXhjdeCN9T3gl6O5b/bmcXHrf6IE+NlMm625hesDIKeDue2O5mVvn8PW3MerPJ9TNfCreey2Zjq55QciH7EWug7m6b5bJahxrQC4wFaF2QRrC/0zwIezW+XrbygCZwDlCVAAE1CvcS9F+O7TJ0yVP8f7/HPa5+JMQ3xegqrOhT3SBHk237QMcDah+EZj7RifLpcjOc/x3Z7gfaGubMJLExCgkhxQH4SS8j2YUQ0i8ZmkmWwsaYiC4ZVPeO5nflBiPRIn+tJrjKm9EJcCcLzHIVyo6/1vuDdLQdyhp+3cY7TJ+DsynZtJgWcNIKFJ0iy4FHi6LvwUOjFwqEd54PyQL6xL8ZdqhOYt1JUAR0khEtQntZ+ckNY2CJpuBlx8zTcgioGHwYABInF+3RDJXwMcADuFGtcD168ZBZxGGwzXgw3mi2gGvAQE11GUN0JO9uGwKNUAT2uCBlQDp404AUkXGT4a5kCQFMxgo1glmNXA84ap+Avn5n3o+ng9RJjhHPqEGtU97qkG7gzgK4ZFZoWVAisDOgYX4WPTvgVjSvydnJWGo1eIkSgDbiU+fB6Z+uAr7IXn9m9UEbgV1qTfnCrgXUUxwJlBWKEOvCR4oz76b7tCHXhjdeBNZcwvrGQOB3PlU2IAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -103,11 +105,21 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPlSURBVGhD7ZnbSxRhGMYLwvPmeiK8UIM06Kq/wCsDk4qCuinzFP5DgRRJ90GoBNFNZgaeD+vu6h5a1/V8yA4XqRmi7tvzDA1sMs5+uzPuauzAD2Fwv/f5zXzfN+/OnvvhKJOzjLLA9xRjlMEIUwEO9A18BV/ABlh3lMraCcGxWYO1WJO148mYCnCATbBWUCrzuUUSynFKIKdQ/MBnMxyTY7MGa62iJmszg1E2HVMBXgWGjxSVS6SuQUL3Hoj/7n2ZOSE4NmtEbjRoNSnBDEbZdI4V4K3jrVzILxF/ZbXsuD0S3d+Xw729E4U1fnmnxV9Vo9VmBrNpZCrA+TibXywuCGz7/JKqYycQFBcEWJsZkhbgovqMQUYqrshWCgW2ITBSWSNB1GYGSwIBDDIEgZ8pFNiCwBDueiDPJoHBjEBih+1TKNUCti7ihASiUVkfGZW5112y2NUtS109spwAK2Cj542sPe2QmfIq69toogLRw0Ppa2qVV9kOeVdQLL2gr6BEmU9g2FEiHtQN4yG2ir+WHmTJCAw/bpX3WQUygc/N8CGIUKoEwSxY+BveUiuRrIALd2A4+6KEEGQFQYyatuNgPduauWQF3E1tMg6BeYRnGAZJBD10vOA6tgtMYAoNYA1wSnAqLCmyDHgXdOm0CQw0tsjbC/kymOuUibwicSkwBbwgiAfXAsQpoiphrwC20ZXePgk/75TFFy9lBawqst75UjbxN1JbJ/OQibf/69gqYPXgHQy3tmtfbLgLxduByKkT8EPAm12orYkzKTANARd2MS5srgOjbLGcOgEvBCbPusCZvgM+CLghkLY1wK2UQZLh8OBAQi3t2muWtOxCDO/ueCYfG5tluLlNxpqfyLgCk8ADgsB/7brMoSZrM4NRtljsFcBV7H/YJN3ns+VDlkNrKYYUYPPH/onbZxj19E40LQJj6IX6Ed6LVpqt8RzmcjwigM0fFy7bCJU2Wsd2gSl0o2O4mgzFzzOMKtx1GJy1Va4+sV3AAwHu44sQUNkGrXJiApwOqtPAChmB2CMjkAQZgdgjI5AE/78A3xCr/j5AAS8E9H4+7QJ8MxCCwFhFtdIvNBTwQcADAdV+3iqmAnzFx9bWQwHXlPYj3MHuruwfgecOdn/L/s6OhB61aD+ZqvbzVjlWgLDB4pUMOi+Jr7ZOpm7ekdH62zJUf+sfRsAEzs8A/+WrEkEnqvpexyqmAryCDMLGLJjrFDeu7DgYxRSJhd2nC+f5TYp3LJF+3iqmAgzAjpISDMWFyfed7N2PQkm+jebCZ/hUTB9iKkAoQRiIMkTv33X084T/p3/GaDy7iStwuimTP2f2Ock90e+dAAAAAElFTkSuQmCC" InformativeScreenshot="2ccc25fb2a053082fa6096bb7b63c55c.png" Selector="&lt;html app='msedge.exe' title='Generate a Random Name - Fake Name Generator'/&gt;" Url="https://www.fakenamegenerator.com/advanced.php" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog - Choose Country" sap:VirtualizedContainerService.HintSize="434,291" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please insert the country" Options="[Countries.Split(vbCrLf.ToCharArray)]" Title="Select Country">
+    <ui:InputDialog OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="User input: select country (list created with Countries variable extracted previously)" DisplayName="Input Dialog - Choose Country" sap:VirtualizedContainerService.HintSize="434,333" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please insert the country" Options="[Countries.Split(vbCrLf.ToCharArray)]" Title="Select Country">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[Country]</OutArgument>
       </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
   </Sequence>
 </Activity>

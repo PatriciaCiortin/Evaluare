@@ -17,7 +17,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1057,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1146,1123</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -91,50 +91,52 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="376,508" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This is the Main workflow and it's used to invoke the other processes as &quot;InputDialog&quot;, &quot;ExtractData&quot;, &quot;WriteFile&quot;" DisplayName="Main" sap:VirtualizedContainerService.HintSize="376,1058" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InputDialog workflow - InputDialog" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="InputDialog.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;InputDialog&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the workflow for the user input &quot;Country&quot;" DisplayName="Invoke InputDialog workflow - InputDialog" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="InputDialog.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="Country">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="in_Country" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Country">[in_Country]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ExtractData workflow - ExtractData" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ExtractData.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;ExtractData&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the workflow for filtering data on the web page and to extract data for each person generated " DisplayName="Invoke ExtractData workflow - ExtractData" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ExtractData.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Country">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Country" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_Name">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_Name" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_Email">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_Email" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_FullPhone">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_FullPhone" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Country">[in_Country]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Name">[out_Name]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Email">[out_Email]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_FullPhone">[out_FullPhone]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WriteFile workflow - WriteFile" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="WriteFile.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;WriteFile&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the workflow for writing in the text file &quot;FakeNameGenerator.txt&quot;" DisplayName="Invoke WriteFile workflow - WriteFile" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="WriteFile.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Name">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Name" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Email">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Email" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_FullPhone">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_FullPhone" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Name">[out_Name]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Email">[out_Email]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FullPhone">[out_FullPhone]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>
